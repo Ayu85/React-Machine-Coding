@@ -26,7 +26,7 @@ const Pagination = () => {
                 }
             </div>
             <div className='flex gap-1'>
-                {data.slice(0, 10).map((item, idx) => {
+                {data.slice(0, data.length / 10).map((item, idx) => {
                     return <h1 onClick={() => setPage(idx + 1)} key={idx + 1}
                         className={`text-xl bg-gray-400
                          px-2 py-2 rounded-lg cursor-pointer
