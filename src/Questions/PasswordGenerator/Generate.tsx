@@ -45,13 +45,11 @@ const Generate = () => {
 
         setP(password)
     };
-    const [copied, setCopied] = useState(false); // To track copied status
 
     const copyToClipboard = () => {
         if (password) {
             navigator.clipboard.writeText(password)
                 .then(() => {
-                    setCopied(true); // Set copied status to true
                     alert("Password copied to clipboard!"); // Optional: Display an alert or custom message
                 })
                 .catch((err) => {
