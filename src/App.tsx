@@ -4,7 +4,8 @@ import Pagination from './Questions/Pagination/Pagination'
 // import Page from './Questions/DropDown Select/Page'
 import Generate from './Questions/PasswordGenerator/Generate'
 import UseMemExp from './hooks/UseMemExp'
-import Page from './Questions/AutoSuggestionSearch/Page'
+import Page from './Questions/InfiniteScroll/Page'
+// import Page from './Questions/AutoSuggestionSearch/Page'
 
 const App = () => {
   return (
