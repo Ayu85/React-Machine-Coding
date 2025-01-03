@@ -1,14 +1,15 @@
-import React, { useState } from 'react'
+import React, { useCallback, useState } from 'react'
 import Header from '../components/Header'
 
 const UseCallback = () => {
   const [count, setCount] = useState(0)
-  const [user, setUser] = useState('none')
-
+  const setUser = useCallback(() => {
+    return 'aayush'
+  },[])
   return (
     <div>
-      <Header user={user} />
-      <button onClick={()=>setUser('aayush')}>setuser</button>
+      <Header setUser={setUser} />
+      <button>setuser</button>
       <h1>{count}</h1>
       <button onClick={() => setCount(count + 1)}>click ++</button>
     </div>
