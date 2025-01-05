@@ -9,15 +9,18 @@ import UseCallback from './hooks/UseCallback'
 import HOC from './HigherOrderComponents/HOC'
 import { Route, Routes } from 'react-router-dom'
 import Login from './Login'
+import HOC2 from './HigherOrderComponents/HOC2'
+import Parent from './HigherOrderComponents/HOC2'
 // import Page from './Questions/AutoSuggestionSearch/Page'
 
 const App = () => {
   return (
-    <Routes >
-      {/* <Rating /> */}
-      <Route path='/' element={<HOC  />}/>
-      <Route path='/login' element={<Login  />}/>
-    </Routes>
+    // <Routes >
+    //   {/* <Rating /> */}
+    //   <Route path='/' element={<HOC  />}/>
+    //   <Route path='/login' element={<Login  />}/>
+    // </Routes>
+    <Parent/>
   )
 }
 
