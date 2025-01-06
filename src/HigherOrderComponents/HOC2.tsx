@@ -6,6 +6,8 @@ const Parent = () => {
       <h1>This is parent component</h1>
       <CounterRed component={Counter} />
       <CounterBlue component={Counter} />
+      <CounterNew color={'red'} />
+      <CounterNew color={'pink'} />
     </div>
   )
 }
@@ -27,5 +29,14 @@ const CounterBlue = props => {
     </div>
   )
 }
-
+const HOCCounter = InputCounter => {
+  return props => {
+    return (
+      <div style={{ backgroundColor: props.color || 'blue' }}>
+        <InputCounter {...props} />
+      </div>
+    )
+  }
+}
+const CounterNew = HOCCounter(Counter)
 export default Parent
