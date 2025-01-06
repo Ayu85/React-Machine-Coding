@@ -11,6 +11,7 @@ import { Route, Routes } from 'react-router-dom'
 import Login from './Login'
 import HOC2 from './HigherOrderComponents/HOC2'
 import Parent from './HigherOrderComponents/HOC2'
+import Profile from './ClassBased/ProfileClass'
 // import Page from './Questions/AutoSuggestionSearch/Page'
 
 const App = () => {
@@ -20,7 +21,7 @@ const App = () => {
     //   <Route path='/' element={<HOC  />}/>
     //   <Route path='/login' element={<Login  />}/>
     // </Routes>
-    <Parent/>
+    <Profile name={'aayush'}/>
   )
 }
 
