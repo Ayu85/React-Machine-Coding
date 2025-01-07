@@ -13,15 +13,26 @@ import HOC2 from './HigherOrderComponents/HOC2'
 import Parent from './HigherOrderComponents/HOC2'
 import Profile from './ClassBased/ProfileClass'
 // import Page from './Questions/AutoSuggestionSearch/Page'
+import useFetch from './hooks/useFetch'
 
 const App = () => {
+  //@ts-ignore
+  const url = `https://jsonplaceholder.typicode.com/todos/1`
+
+  const { data, loading } = useFetch(
+    'https://jsonplaceholder.typicode.com/todos/1'
+  )
   return (
     // <Routes >
     //   {/* <Rating /> */}
     //   <Route path='/' element={<HOC  />}/>
     //   <Route path='/login' element={<Login  />}/>
     // </Routes>
-    <Profile name={'aayush'}/>
+    <>
+      {' '}
+      <div>{loading && 'loading'}</div>
+      <div>{JSON.stringify(data)}</div>
+    </>
   )
 }
 
