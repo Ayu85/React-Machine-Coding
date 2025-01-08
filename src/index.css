@@ -2,5 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 body{
-    background-color: gray;
+    background-color: black;
+    color: wheat;
 }

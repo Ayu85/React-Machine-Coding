@@ -4,7 +4,6 @@ import Pagination from './Questions/Pagination/Pagination'
 // import Page from './Questions/DropDown Select/Page'
 import Generate from './Questions/PasswordGenerator/Generate'
 import UseMemExp from './hooks/UseMemExp'
-import Page from './Questions/InfiniteScroll/Page'
 import UseCallback from './hooks/UseCallback'
 import HOC from './HigherOrderComponents/HOC'
 import { Route, Routes } from 'react-router-dom'
@@ -14,6 +13,7 @@ import Parent from './HigherOrderComponents/HOC2'
 import Profile from './ClassBased/ProfileClass'
 // import Page from './Questions/AutoSuggestionSearch/Page'
 import useFetch from './hooks/useFetch'
+import Page from './Questions/FolderStructure/Page'
 
 const App = () => {
   //@ts-ignore
@@ -22,17 +22,19 @@ const App = () => {
   const { data, loading } = useFetch(
     'https://jsonplaceholder.typicode.com/todos/1'
   )
+
   return (
     // <Routes >
     //   {/* <Rating /> */}
     //   <Route path='/' element={<HOC  />}/>
     //   <Route path='/login' element={<Login  />}/>
     // </Routes>
-    <>
-      {' '}
-      <div>{loading && 'loading'}</div>
-      <div>{JSON.stringify(data)}</div>
-    </>
+    // <>
+    //   {' '}
+    //   <div>{loading && 'loading'}</div>
+    //   <div>{JSON.stringify(data)}</div>
+    // </>
+    <Page />
   )
 }
 
