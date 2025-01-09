@@ -13,7 +13,7 @@ import Parent from './HigherOrderComponents/HOC2'
 import Profile from './ClassBased/ProfileClass'
 // import Page from './Questions/AutoSuggestionSearch/Page'
 import useFetch from './hooks/useFetch'
-import Page from './Questions/Accordion/Page'
+import Page from './Questions/Stepper/Page'
 
 const App = () => {
   //@ts-ignore
@@ -34,7 +34,7 @@ const App = () => {
     //   <div>{loading && 'loading'}</div>
     //   <div>{JSON.stringify(data)}</div>
     // </>
-    <Page />
+    <Page/>
   )
 }
 
