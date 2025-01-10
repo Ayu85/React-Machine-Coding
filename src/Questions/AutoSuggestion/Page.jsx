@@ -1,11 +1,8 @@
 import React, { useState } from 'react'
 const debounce = fn => {
-  let timer // This will keep track of the timer
+  let timer
   return function (...args) {
-    // If a timer already exists, cancel it
     if (timer) clearTimeout(timer)
-
-    // Set a new timer to run the function after 500ms
     timer = setTimeout(() => fn(...args), 300)
   }
 }
