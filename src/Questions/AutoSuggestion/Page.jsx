@@ -138,7 +138,7 @@ const Page = () => {
         <input
           onChange={e => {
             setVal(e.target.value)
-            debounce(e.target.value)
+            debouncedSuggestion(e.target.value)
           }}
           type='text'
           className=' bg-zinc-700 w-full text-white p-3'
