@@ -1,4 +1,14 @@
 import React, { useState } from 'react'
+const debounce = fn => {
+  let timer // This will keep track of the timer
+  return function (...args) {
+    // If a timer already exists, cancel it
+    if (timer) clearTimeout(timer)
+
+    // Set a new timer to run the function after 500ms
+    timer = setTimeout(() => fn(...args), 300)
+  }
+}
 
 const Page = () => {
   const indianFoodItems = [
@@ -118,16 +128,20 @@ const Page = () => {
   const handleSuggestion = value => {
     if (value == '') setSugg([])
     else {
-      const data = indianFoodItems.filter(item => item.toLowerCase().includes(value))
+      const data = indianFoodItems.filter(item =>
+        item.toLowerCase().includes(value)
+      )
       setSugg(data)
     }
   }
+  const debouncedSuggestion =debounce(handleSuggestion) 
   return (
     <div className='flex justify-center items-center h-screen flex-col'>
       <div className='w-96'>
         <input
           onChange={e => {
-            handleSuggestion(e.target.value)
+            setVal(e.target.value)
+            debounce(e.target.value)
           }}
           type='text'
           className=' bg-zinc-700 w-full text-white p-3'
