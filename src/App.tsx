@@ -13,7 +13,7 @@ import Parent from './HigherOrderComponents/HOC2'
 import Profile from './ClassBased/ProfileClass'
 // import Page from './Questions/AutoSuggestionSearch/Page'
 import useFetch from './hooks/useFetch'
-import Page from './Questions/Stepper/Page'
+import Page from './Questions/AutoSuggestion/Page'
 
 const App = () => {
   //@ts-ignore
